@@ -1,0 +1,24 @@
+uni_sistemas_software:
+    resource: "@uniSistemasBundle/Resources/config/routing/software.yml"
+    prefix:   /software
+
+uni_sistemas_hardware:
+    resource: "@uniSistemasBundle/Resources/config/routing/hardware.yml"
+    prefix:   /hardware
+
+uni_sistemas_maquinasv:
+    resource: "@uniSistemasBundle/Resources/config/routing/maquinasv.yml"
+    prefix:   /maquinasv
+
+uni_sistemas_homepage:
+    path:     /sistemas
+    defaults: { _controller: uniSistemasBundle:Default:index }
+        
+linkHardware:
+    path:     /linkHardware
+    defaults: { _controller: "uniSistemasBundle:hardware:buscarHardware" }
+    
+linkSoftware:
+    path:     /linkSoftware
+    defaults: { _controller: "uniSistemasBundle:software:buscarSoftware" }
+

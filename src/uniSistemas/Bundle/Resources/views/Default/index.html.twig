@@ -1,0 +1,13 @@
+{% extends 'uniSistemasBundle::layout.html.twig' %}
+
+
+{% block cuerpo -%}
+    <h1>Ivan-Sistemas</h1>
+
+    <a href="{{ path('hardware') }}">Hardware</a>
+    <br>
+    <a href="{{ path('maquinasv') }}">Maquinas Virtuales</a>
+    <br>
+    <a href="{{ path('software') }}">Software</a>
+    {% endblock %}
+

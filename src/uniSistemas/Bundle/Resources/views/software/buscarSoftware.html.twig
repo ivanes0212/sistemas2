@@ -1,0 +1,10 @@
+{% extends 'uniSistemasBundle::layout.html.twig' %}
+
+
+{% block cuerpo -%}
+    <br>Buscar software:
+<form action="{{path('software_responder_software')}}" method="POST">
+    <input type="text" name="nombre" value="Software a buscar">
+    <input type="submit" value="OK">
+</form>
+    {% endblock %}

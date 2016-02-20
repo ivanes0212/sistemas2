@@ -1,0 +1,23 @@
+{% extends 'uniSistemasBundle::layout.html.twig' %}
+
+
+{% block cuerpo -%}
+    <h1>Listado de maquinas virtuales en {{nomHard}}:</h1>
+
+        {% for entity in entities %}
+               {% for mv in entity.hardmaqs %}
+            
+            
+        <h2><a href="{{ path('maquinasv_show', { 'id': mv.id }) }}">{{ mv.nombre }}</a></h2>
+              
+        {{ mv.ipvirtual }} 
+        <br>
+        {{ mv.tareas }}  
+       
+                <br>
+                
+                
+                {% endfor %}
+                
+        {% endfor %}
+    {% endblock %}

@@ -1,0 +1,30 @@
+maquinasv:
+    path:     /
+    defaults: { _controller: "uniSistemasBundle:maquinasv:index" }
+
+maquinasv_show:
+    path:     /{id}/show
+    defaults: { _controller: "uniSistemasBundle:maquinasv:show" }
+
+maquinasv_new:
+    path:     /new
+    defaults: { _controller: "uniSistemasBundle:maquinasv:new" }
+
+maquinasv_create:
+    path:     /create
+    defaults: { _controller: "uniSistemasBundle:maquinasv:create" }
+    requirements: { _method: post }
+
+maquinasv_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "uniSistemasBundle:maquinasv:edit" }
+
+maquinasv_update:
+    path:     /{id}/update
+    defaults: { _controller: "uniSistemasBundle:maquinasv:update" }
+    requirements: { _method: post|put }
+
+maquinasv_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "uniSistemasBundle:maquinasv:delete" }
+    requirements: { _method: post|delete }

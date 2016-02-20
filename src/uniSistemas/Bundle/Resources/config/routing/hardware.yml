@@ -1,0 +1,40 @@
+hardware:
+    path:     /
+    defaults: { _controller: "uniSistemasBundle:hardware:index" }
+
+hardware_show:
+    path:     /{id}/show
+    defaults: { _controller: "uniSistemasBundle:hardware:show" }
+
+hardware_new:
+    path:     /new
+    defaults: { _controller: "uniSistemasBundle:hardware:new" }
+
+hardware_create:
+    path:     /create
+    defaults: { _controller: "uniSistemasBundle:hardware:create" }
+    requirements: { _method: post }
+
+hardware_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "uniSistemasBundle:hardware:edit" }
+
+hardware_update:
+    path:     /{id}/update
+    defaults: { _controller: "uniSistemasBundle:hardware:update" }
+    requirements: { _method: post|put }
+
+hardware_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "uniSistemasBundle:hardware:delete" }
+    requirements: { _method: post|delete }
+    
+hardware_buscar_hardware:
+    path:     /buscarhardware
+    defaults: { _controller: "uniSistemasBundle:hardware:buscarHardware" }
+
+hardware_responder_hardware:
+    path:     /responderhardware
+    defaults: { _controller: "uniSistemasBundle:hardware:responderHardware" }
+    requirements: { _method: post|put }
+

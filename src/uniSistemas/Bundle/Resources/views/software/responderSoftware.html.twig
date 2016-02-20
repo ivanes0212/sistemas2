@@ -1,0 +1,22 @@
+{% extends 'uniSistemasBundle::layout.html.twig' %}
+
+
+{% block cuerpo -%}
+    <h1>Listado de maquinas virtuales con este software: {{nomSoft}}</h1>
+    
+           {% for entity in entities %}
+               <h3>Maquinas que usan --> {{entity.nombre}}</h3>
+               {% for soft in entity.softmaq %}
+            
+            
+        <h2><a href="{{ path('maquinasv_show', { 'id': soft.id }) }}">{{ soft.nombre }}</a></h2>
+             {{soft.ipvirtual}}
+            <br>
+            Hardware en el que está la maquina:{{soft.maqhard.nombre}}
+            <br>
+            <br>
+   
+                {% endfor %}
+                {% endfor %}
+        
+    {% endblock %}
